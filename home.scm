@@ -1,24 +1,11 @@
 (use-modules
- (guix packages)
- (gnu home)
- (gnu services)
- (gnu packages admin)
- (gnu packages emacs)
- (gnu packages erlang)
- (gnu packages version-control)
- (gnu packages fontutils)
- (gnu packages bash)
- (gnu packages base)
- (guix git)) ; Use this for working with Git repositories in scripts
+ (gnu home)                             ; Core home module
+ (gnu packages vim)                     ; Module for vim and related tools
+ (gnu packages version-control)         ; Module for git
+ (gnu packages admin))                  ; Module for htop and admin tools
 
 (home-environment
  (packages
-  (list
-   git
-   fontconfig
-   bash
-   coreutils
-   htop
-   emacs
-   erlang))
-)
+  ;; List of packages to install declaratively
+  (list vim git htop))
+ )
